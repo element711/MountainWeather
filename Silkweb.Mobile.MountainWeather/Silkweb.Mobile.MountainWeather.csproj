@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{0A3E20CE-6561-4F6B-AD56-24FCCE1BDF98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Silkweb.Mobile.MountainWeather</RootNamespace>
+    <AssemblyName>Silkweb.Mobile.MountainWeather</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MountainForecastApp.xaml.cs">
+      <DependentUpon>MountainWeatherApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IMountainWeatherService.cs" />
+    <Compile Include="Services\MountainWeatherService.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="ViewModels\MountainAreasViewModel.cs" />
+    <Compile Include="ViewModels\MountainAreaViewModel.cs" />
+    <Compile Include="Views\MountainAreasView.xaml.cs">
+      <DependentUpon>MountainAreasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Models\ForecastReport.cs" />
+    <Compile Include="ViewModels\ForecastReportViewModel.cs" />
+    <Compile Include="Views\ForecastReportView.xaml.cs">
+      <DependentUpon>ForecastReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MountainWeatherModule.cs" />
+    <Compile Include="Models\Forecast.cs" />
+    <Compile Include="Models\ForecastCapability.cs" />
+    <Compile Include="Models\GaugeText.cs" />
+    <Compile Include="Models\Hazard.cs" />
+    <Compile Include="Models\RainGauge.cs" />
+    <Compile Include="Models\Risk.cs" />
+    <Compile Include="Models\WeatherPPN.cs" />
+    <Compile Include="Models\WxPeriod.cs" />
+    <Compile Include="Behaviors\ItemsSourceBehavior.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Behaviors">
+      <HintPath>..\packages\Xamarin.Forms.Behaviors.1.2.0\lib\Xamarin.Behaviors.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Behaviors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MountainAreasView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <LogicalName>Silkweb.Mobile.MountainForecast.Views.MountainAreasView.xaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ForecastReportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <LogicalName>Silkweb.Mobile.MountainForecast.Views.ForecastReportView.xaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MountainWeatherApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <LogicalName>Silkweb.Mobile.MountainForecast.MountainForecastApp.xaml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Silkweb.Mobile.Core\Silkweb.Mobile.Core.csproj">
+      <Project>{7B272960-22E5-4365-97C6-E930277F872E}</Project>
+      <Name>Silkweb.Mobile.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

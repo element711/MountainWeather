@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:cv="clr-namespace:Silkweb.Mobile.Core.Views;assembly=Silkweb.Mobile.Core"
+	x:Class="Silkweb.Mobile.MountainWeather.Views.MountainAreasView"
+	Title="{Binding Title}">
+
+	<ListView ItemsSource="{Binding Areas}">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<cv:TextCellExtended Text="{Binding Name}"
+									 ShowDisclosure="True"
+									 Command="{Binding ShowForecastCommand}" />
+
+
+<!--									 Detail="{Binding IssuedDate, StringFormat='{0:ddd dd MMM yyyy} at {0:H:mm}'}"-->
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

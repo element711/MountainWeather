@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Silkweb.Mobile.MountainWeather.Views.ForecastReportView"
+	xmlns:cv="clr-namespace:Silkweb.Mobile.Core.Views;assembly=Silkweb.Mobile.Core"
+	xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors"
+	xmlns:behaviors="clr-namespace:Silkweb.Mobile.MountainWeather.Behaviors;assembly=Silkweb.Mobile.MountainWeather"
+	Title="{Binding Title}">
+
+	<StackLayout Padding="5">
+
+		<Label BindingContext="{Binding ForecastReport}" 
+			   Text="{Binding IssueDateTime, StringFormat='Issued at {0:ddd dd MMM yyyy} at {0:H:mm}'}" 
+			   Font="Bold, Micro" />
+		<Label BindingContext="{Binding ForecastReport}" Text="{Binding Overview}" Font="Micro" VerticalOptions="FillAndExpand" />
+		<ScrollView Orientation="Horizontal" VerticalOptions="End">
+			<StackLayout Orientation="Horizontal">
+				<b:Interaction.Behaviors>
+					<b:BehaviorCollection>
+						<behaviors:ItemsSourceBehavior ItemsSource="{Binding Days}">
+							<behaviors:ItemsSourceBehavior.ItemTemplate>
+								<DataTemplate>
+									<Frame OutlineColor="Gray">
+										<Label Text="{Binding Day}" />				
+									</Frame> 
+								</DataTemplate>
+							</behaviors:ItemsSourceBehavior.ItemTemplate>
+						</behaviors:ItemsSourceBehavior>
+					</b:BehaviorCollection>
+				</b:Interaction.Behaviors>
+			</StackLayout>
+		</ScrollView>
+
+<!--	<TableView BindingContext="{Binding ForecastReport}">
+		<TableView.Root>
+			<TableRoot>
+							
+				<TableSection Title="Forecast">
+					<TextCell Text="{Binding IssueDateTime, StringFormat='Issued at {0:ddd dd MMM yyyy} at {0:H:mm}'}" />
+					<TextCell Text="{Binding ValidFrom, StringFormat='Valid from {0:ddd dd MMM yyyy 0:H:mm}'}" />
+					<TextCell Text="{Binding ValidTo, StringFormat='Valid to {0:ddd dd MMM yyyy 0:H:mm}'}" />
+				</TableSection>
+
+				<TableSection Title="Overview">
+					<ViewCell>
+						<ViewCell.View>
+							<Label Text="{Binding Overview}" Font="Mirco" /> 
+						</ViewCell.View>
+					</ViewCell>
+				</TableSection>
+
+				<TableSection Title="{Binding IssueDateTime, StringFormat='{0:ddd}'}">
+					<ViewCell>
+						<ViewCell.View>
+							<Label BindingContext="{Binding ForecastDay0}" Text="{Binding Weather}" Font="Mirco" /> 
+						</ViewCell.View>
+					</ViewCell>
+				</TableSection>
+
+			</TableRoot>
+		</TableView.Root>
+	</TableView>-->
+
+<!--	<StackLayout BindingContext="{Binding ForecastReport}">
+		<Label Text="Overview" Font="Bold, Micro" />
+		<Label Text="{Binding Overview}" Font="Micro" TextColor="Accent" />
+	</StackLayout>
+
+	<StackLayout>
+		<Label Text="Forecast" Font="Bold, Micro" />
+		<ListView ItemsSource="{Binding ForecastDays}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<cv:TextCellExtended
+						Text="{Binding}"
+						ShowDisclosure="True" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>-->
+
+	</StackLayout>
+
+</ContentPage>
