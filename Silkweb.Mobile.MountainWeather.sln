@@ -26,7 +26,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{4FC3BA8F-DEF7-403B-9F97-6F9060CD060D}"
 	ProjectSection(SolutionItems) = preProject
 		DataPoint_API_reference.pdf = DataPoint_API_reference.pdf
-		DataPointKey.txt = DataPointKey.txt
 	EndProjectSection
 EndProject
 Global
