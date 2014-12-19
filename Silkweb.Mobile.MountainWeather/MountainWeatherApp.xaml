@@ -3,10 +3,15 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:core="clr-namespace:Silkweb.Mobile.Core;assembly=Silkweb.Mobile.Core" 
+  	xmlns:converters="clr-namespace:Silkweb.Mobile.MountainWeather.Converters;assembly=Silkweb.Mobile.MountainWeather"
 	x:Class="Silkweb.Mobile.MountainWeather.MountainWeatherApp">
 	<core:App.Resources>
 		<ResourceDictionary>
-			<Color x:Key="textColor">Red</Color>
+      		<converters:ImageSourceConverter x:Key="imageSourceConverter" />
+      		<Color x:Key="backgroundColor">#3d78a2</Color>
+      		<Color x:Key="highlightColor">#1AFFFFFF</Color>
+      		<Color x:Key="textColor">White</Color>
+      		<Color x:Key="accentColor">White</Color>
 		</ResourceDictionary>
 	</core:App.Resources>
 </core:App>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,6 +30,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Extensions\ApplicationResourceExtension.cs" />
@@ -47,6 +48,27 @@
     <Compile Include="Views\PageProxy.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Interfaces\IDialogProvider.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\MathExtensions.cs" />
+    <Compile Include="Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="Interfaces\INavigationAware.cs" />
+    <Compile Include="Views\TypedDataTemplate.cs" />
+    <Compile Include="Views\TemplateSelector.cs" />
+    <Compile Include="Exceptions\NoDataTemplateMatchException.cs" />
+    <Compile Include="Exceptions\InvalidVisualObjectException.cs" />
+    <Compile Include="Exceptions\InvalidBindableException.cs" />
+    <Compile Include="Views\TabbedView.xaml.cs">
+      <DependentUpon>TabbedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\SelectableViewModel.cs" />
+    <Compile Include="Interfaces\ISelectable.cs" />
+    <Compile Include="Views\ItemsView.xaml.cs">
+      <DependentUpon>ItemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TemplateContentView.cs" />
+    <Compile Include="Views\IDataTemplateWrapper.cs" />
+    <Compile Include="Views\DataTemplateWrapper.cs" />
+    <Compile Include="Views\DataTemplateCollection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -64,13 +86,18 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Factories\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Bootstrapping\" />
-    <Folder Include="Views\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TabbedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <LogicalName>TabbedView.xaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <LogicalName>ItemsView.xaml</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

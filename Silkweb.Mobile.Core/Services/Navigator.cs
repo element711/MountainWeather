@@ -26,13 +26,17 @@ namespace Silkweb.Mobile.Core.Services
         public async Task<IViewModel> PopAsync()
         {
             Page view = await Navigation.PopAsync();
-            return view.BindingContext as IViewModel;
+            var viewModel = view.BindingContext as IViewModel;
+            viewModel.NavigatedFrom();
+            return viewModel;
         }
 
         public async Task<IViewModel> PopModalAsync()
         {
             Page view = await Navigation.PopAsync();
-            return view.BindingContext as IViewModel;
+            var viewModel = view.BindingContext as IViewModel;
+            viewModel.NavigatedFrom();
+            return viewModel;
         }
 
         public async Task PopToRootAsync()
@@ -46,6 +50,7 @@ namespace Silkweb.Mobile.Core.Services
             TViewModel viewModel;
             var view = _viewFactory.Resolve<TViewModel>(out viewModel, setStateAction);
             await Navigation.PushAsync(view);
+            viewModel.NavigatedTo();
             return viewModel;
         }
 
@@ -54,6 +59,7 @@ namespace Silkweb.Mobile.Core.Services
         {
             var view = _viewFactory.Resolve(viewModel);
             await Navigation.PushAsync(view);
+            viewModel.NavigatedTo();
             return viewModel;
         }
 

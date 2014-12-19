@@ -37,6 +37,13 @@ namespace Silkweb.Mobile.MountainWeather
             var mainPage = viewFactory.Resolve<MountainAreasViewModel>();
             var navigationPage = new NavigationPage(mainPage);
 
+            Color backgroundColor = (Color)App.Current.Resources["backgroundColor"]; 
+            Color textColor = (Color)App.Current.Resources["textColor"];
+
+            navigationPage.BarBackgroundColor = backgroundColor;
+            navigationPage.BarTextColor = textColor;
+            navigationPage.BackgroundColor = backgroundColor;
+
             _application.MainPage = navigationPage;
         }
     }

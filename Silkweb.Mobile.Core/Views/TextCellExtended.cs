@@ -13,6 +13,16 @@ namespace Silkweb.Mobile.Core.Views
             get { return (bool)GetValue(ShowDisclosureProperty); } 
             set { SetValue(ShowDisclosureProperty, value); } 
         }
+
+        public static readonly BindableProperty SelectedBackgroundColorProperty = 
+            BindableProperty.Create<TextCellExtended,Color>(p => p.SelectedBackgroundColor, default(Color));
+
+        public Color SelectedBackgroundColor
+        { 
+            get { return (Color)GetValue(SelectedBackgroundColorProperty); } 
+            set { SetValue(SelectedBackgroundColorProperty, value); } 
+        }
+
     }
 }
 

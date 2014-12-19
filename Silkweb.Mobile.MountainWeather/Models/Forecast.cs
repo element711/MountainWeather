@@ -5,6 +5,8 @@ namespace Silkweb.Mobile.MountainWeather.Models
 {
 	public class Forecast
 	{
+        public DateTime Date { get; set; }
+
         public string Weather { get; set; }
 
         public string Visibility { get; set; }

@@ -1,11 +1,8 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Silkweb.Mobile.MountainWeather.ViewModels;
 using Silkweb.Mobile.MountainWeather.Models;
-using Silkweb.Mobile.MountainWeather.Services;
 using Moq;
 using Silkweb.Mobile.Core.Services;
-using Silkweb.Mobile.Core.Interfaces;
 
 namespace Silkweb.Mobile.MountainWeather.Tests.ViewModels
 {
@@ -16,19 +13,17 @@ namespace Silkweb.Mobile.MountainWeather.Tests.ViewModels
         public void ShowsForecastWhenShowForecastCommandExecutes()
         {
             var location = new Location { Id = 100, Name = "Area 1" };
-            var service = new Mock<IMountainWeatherService>();
-            var forecast = new ForecastReport { ForecastDay0  = new Forecast { Weather =  "Test forecast" } };
-            service.Setup(x => x.GetAreaForecast(100)).ReturnsAsync(forecast);
             var navigator = new Mock<INavigator>();
-            var dialogProvder = new Mock<IDialogProvider>();
+            var forecastReportViewModel = new Mock<ForecastReportViewModel>();
 
-            var viewModel = new MountainAreaViewModel(location, service.Object, navigator.Object, dialogProvder.Object);
+            var viewModel = new MountainAreaViewModel(location, navigator.Object, x => forecastReportViewModel.Object);
 
             Assert.That(viewModel.Name, Is.EqualTo(location.Name));
 
             viewModel.ShowForecastCommand.Execute(null);
 
-            service.Verify(x => x.GetAreaForecast(100));
+            // add verifications..
+
         }
     }
 }

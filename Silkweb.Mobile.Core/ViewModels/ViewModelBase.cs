@@ -5,14 +5,21 @@ using System.Runtime.CompilerServices;
 
 namespace Silkweb.Mobile.Core.ViewModels
 {
-    public abstract class ViewModelBase : IViewModel
+    public abstract class ViewModelBase : IViewModel, IDisposable
     {
         private string _title;
+        private bool _isBusy;
 
         public string Title
         {
             get { return _title; }
             set { SetProperty(ref _title, value); }
+        }
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set { SetProperty(ref _isBusy, value); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -40,6 +47,18 @@ namespace Silkweb.Mobile.Core.ViewModels
         {
             var propertyName = PropertySupport.ExtractPropertyName(propertyExpression);
             OnPropertyChanged(propertyName);
+        }
+
+        public virtual void NavigatedTo()
+        {
+        }
+
+        public virtual void NavigatedFrom()
+        {
+        }
+
+        public virtual void Dispose()
+        {
         }
     }
 }

@@ -1,33 +1,29 @@
 ﻿using System;
 using Silkweb.Mobile.MountainWeather.Models;
-using Silkweb.Mobile.MountainWeather.Services;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Silkweb.Mobile.Core.Services;
 using Silkweb.Mobile.Core.ViewModels;
-using Silkweb.Mobile.Core.Interfaces;
 
 namespace Silkweb.Mobile.MountainWeather.ViewModels
 {
     public class MountainAreaViewModel : ViewModelBase
     {
-        private readonly IMountainWeatherService _mountainWeatherService;
         private readonly INavigator _navigator;
         private readonly Location _location;
-        private readonly IDialogProvider _dialogProvider;
+        private readonly ForecastReportViewModel _forecastReportViewModel;
 
-        public MountainAreaViewModel(Location location, 
-            IMountainWeatherService mountainWeatherService,
+        public MountainAreaViewModel(
+            Location location, 
             INavigator navigator,
-            IDialogProvider dialogProvider)
+            Func<Location, ForecastReportViewModel> forecastReportViewModelFactory)
         {
-            this._dialogProvider = dialogProvider;
             _location = location;
             _navigator = navigator;
-            _mountainWeatherService = mountainWeatherService;
+            _forecastReportViewModel = forecastReportViewModelFactory(_location);
+
             ShowForecastCommand = new Command(ShowForecast);
         }
-
 
         public string Name { get { return _location.Name; } }
 
@@ -41,27 +37,7 @@ namespace Silkweb.Mobile.MountainWeather.ViewModels
 
         private async void ShowForecast()
         {
-            try
-            {
-                ForecastReport forecastReport = await _mountainWeatherService.GetAreaForecast(_location.Id);
-
-                if (forecastReport == null)
-                    return;
-
-                await _navigator.PushAsync<ForecastReportViewModel>(vm => 
-                    {
-                        vm.Title = _location.Name;
-                        vm.ForecastReport = forecastReport;
-                    }
-                );
-            }
-            catch (Exception ex)
-            {
-                var result = await _dialogProvider.DisplayActionSheet(ex.Message, "Cancel", null, "Retry");
-
-                if (result == "Retry")
-                    ShowForecast();
-            }
+            await _navigator.PushAsync<ForecastReportViewModel>(_forecastReportViewModel);
         }
     }
 }

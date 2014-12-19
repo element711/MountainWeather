@@ -19,9 +19,10 @@ namespace Silkweb.Mobile.MountainWeather.Tests.ViewModels
             var service = new Mock<IMountainWeatherService>();
             var navigator = new Mock<INavigator>();
             var dialogProvder = new Mock<IDialogProvider>();
+            var forecastReportViewModel = new Mock<ForecastReportViewModel>();
 
             Func<Location, MountainAreaViewModel> locationFactory = location => 
-                new MountainAreaViewModel(location, service.Object, navigator.Object, dialogProvder.Object);
+                new MountainAreaViewModel(location, navigator.Object, x => forecastReportViewModel.Object);
 
             var areas = new Location[]
                 {

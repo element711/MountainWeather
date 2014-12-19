@@ -17,21 +17,23 @@ namespace Silkweb.Mobile.MountainWeather
                 .As<IMountainWeatherService>()
                 .SingleInstance();
 
+//            builder.RegisterType<MockMountainWeatherService>()
+//                .As<IMountainWeatherService>()
+//                .SingleInstance();
+
             // view model registration
             builder.RegisterType<MountainAreaViewModel>();
 
             builder.RegisterType<MountainAreasViewModel>()
                 .SingleInstance();
 
-            builder.RegisterType<ForecastReportViewModel>()
-                .SingleInstance();
+            builder.RegisterType<ForecastReportViewModel>();
 
             // view registration
             builder.RegisterType<MountainAreasView>()
                 .SingleInstance();
 
-            builder.RegisterType<ForecastReportView>()
-                .SingleInstance();   
+            builder.RegisterType<ForecastReportView>();
 
             // current page resolver
             builder.RegisterInstance<Func<Page>>(() => 

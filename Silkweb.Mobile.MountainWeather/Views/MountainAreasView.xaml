@@ -3,19 +3,27 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:cv="clr-namespace:Silkweb.Mobile.Core.Views;assembly=Silkweb.Mobile.Core"
+	xmlns:ex="clr-namespace:Silkweb.Mobile.Core.Extensions;assembly=Silkweb.Mobile.Core"
 	x:Class="Silkweb.Mobile.MountainWeather.Views.MountainAreasView"
 	Title="{Binding Title}">
 
-	<ListView ItemsSource="{Binding Areas}">
-		<ListView.ItemTemplate>
-			<DataTemplate>
-				<cv:TextCellExtended Text="{Binding Name}"
-									 ShowDisclosure="True"
-									 Command="{Binding ShowForecastCommand}" />
+	<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
 
+		<ListView ItemsSource="{Binding Areas}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+				  BackgroundColor="{ex:ApplicationResource backgroundColor}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<cv:TextCellExtended TextColor="{ex:ApplicationResource textColor}" Text="{Binding Name}" 
+										 ShowDisclosure="True" Command="{Binding ShowForecastCommand}"
+										 SelectedBackgroundColor="{ex:ApplicationResource highlightColor}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
 
-<!--									 Detail="{Binding IssuedDate, StringFormat='{0:ddd dd MMM yyyy} at {0:H:mm}'}"-->
-			</DataTemplate>
-		</ListView.ItemTemplate>
-	</ListView>
+		<ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" Color="Default" />
+
+	</Grid>
 </ContentPage>

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace Silkweb.Mobile.MountainWeather.Models
 {
 	public class WxPeriod
@@ -15,9 +12,6 @@ namespace Silkweb.Mobile.MountainWeather.Models
 
         public string PpnType { get; set; }
 	}
-
-
-
 
 }
 

@@ -1,7 +1,10 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Silkweb.Mobile.MountainWeather.ViewModels;
 using Silkweb.Mobile.MountainWeather.Models;
+using Moq;
+using Silkweb.Mobile.MountainWeather.Services;
+using Silkweb.Mobile.Core.Interfaces;
+using System.Linq;
 
 namespace Silkweb.Mobile.MountainWeather.Tests.ViewModels
 {
@@ -11,21 +14,16 @@ namespace Silkweb.Mobile.MountainWeather.Tests.ViewModels
         [Test]
         public void CreatesWithForecast()
         {
-            bool forecastChanged = false;
-            var forecastReport = new ForecastReport { ForecastDay0 = new Forecast { Weather =  "Test Forecast" }};
-            var viewModel = new ForecastReportViewModel();
+            var location = new Location { Id = 100, Name = "Area 1" };
+            var service = new MockMountainWeatherService();
+            var dialogProvder = new Mock<IDialogProvider>();
 
-            viewModel.PropertyChanged += (sender, e) => 
-                {
-                    if (e.PropertyName == "Forecast" && viewModel.ForecastReport == forecastReport)
-                    {
-                        forecastChanged = true;
-                    }
-                };
+            var viewModel = new ForecastReportViewModel(location, dialogProvder.Object, service);
+            viewModel.LoadForecast();
 
-            viewModel.ForecastReport = forecastReport;
 
-            Assert.That(forecastChanged, Is.True);
+            Assert.That(viewModel.Items, Is.Not.Null);
+            Assert.That(viewModel.Items.Count(), Is.EqualTo(5));
         }
 
     }

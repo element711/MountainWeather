@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xamarin.Forms;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Silkweb.Mobile.MountainWeather.Views
-{	
-	public partial class ForecastReportView : ContentPage
-	{	
-		public ForecastReportView ()
-		{
-			InitializeComponent ();
-		}
-	}
+{
+    public partial class ForecastReportView
+    {
+        public ForecastReportView()
+        {
+            InitializeComponent();
+        }
+    }
 }
-

@@ -63,13 +63,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Silkweb.Mobile.MountainWeather\Silkweb.Mobile.MountainWeather.csproj">
-      <Project>{0A3E20CE-6561-4F6B-AD56-24FCCE1BDF98}</Project>
-      <Name>Silkweb.Mobile.MountainWeather</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Silkweb.Mobile.Core\Silkweb.Mobile.Core.csproj">
       <Project>{7B272960-22E5-4365-97C6-E930277F872E}</Project>
       <Name>Silkweb.Mobile.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Silkweb.Mobile.MountainWeather\Silkweb.Mobile.MountainWeather.csproj">
+      <Project>{0A3E20CE-6561-4F6B-AD56-24FCCE1BDF98}</Project>
+      <Name>Silkweb.Mobile.MountainWeather</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

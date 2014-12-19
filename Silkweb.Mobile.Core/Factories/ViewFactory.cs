@@ -14,7 +14,10 @@ namespace Silkweb.Mobile.Core.Factories
         public ViewFactory(IComponentContext componentContext)
         {
             _componentContext = componentContext;
+            Instance = this;
         }
+
+        public static IViewFactory Instance { get; private set; }
 
         public void Register<TViewModel, TView>() 
             where TViewModel : class, IViewModel 
@@ -47,7 +50,8 @@ namespace Silkweb.Mobile.Core.Factories
         public Page Resolve<TViewModel>(TViewModel viewModel) 
             where TViewModel : class, IViewModel 
         {
-            var viewType = _map[typeof(TViewModel)];
+            var type = viewModel.GetType();
+            var viewType = _map[type];
             var view = _componentContext.Resolve(viewType) as Page;
             view.BindingContext = viewModel;
             return view;

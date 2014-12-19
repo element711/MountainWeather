@@ -37,6 +37,7 @@ namespace Silkweb.Mobile.MountainWeather.ViewModels
         {
             try
             {
+                IsBusy = true;
                 var locations = await _mountainWeatherService.GetAreas();
 
                 if (locations == null)
@@ -48,10 +49,19 @@ namespace Silkweb.Mobile.MountainWeather.ViewModels
             }
             catch (Exception ex)
             {
-                var result = await _dialogProvider.DisplayActionSheet(ex.Message, "Cancel", null, "Retry");
+                Action action = async () =>
+                {
+                    var result = await _dialogProvider.DisplayActionSheet(ex.Message, "Cancel", null, "Retry");
 
-                if (result == "Retry")
-                    SetAreas();
+                    if (result == "Retry")
+                        SetAreas();
+                };
+
+                action();
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
     }

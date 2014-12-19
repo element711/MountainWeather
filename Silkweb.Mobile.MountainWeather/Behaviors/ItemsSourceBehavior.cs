@@ -33,6 +33,11 @@ namespace Silkweb.Mobile.MountainWeather.Behaviors
 
         private void SetItems()
         {
+            AssociatedObject.Children.Clear();
+
+            if (ItemsSource == null)
+                return;
+
             foreach (var item in ItemsSource)
                 AssociatedObject.Children.Add(GetItemView(item));
         }
