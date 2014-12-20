@@ -5,6 +5,6 @@
 	x:Class="Silkweb.Mobile.Core.Views.ItemsView"
 	Orientation="Horizontal">
   
-	<StackLayout x:Name="stackLayout" Orientation="Horizontal" Padding="0" Spacing="0" VerticalOptions="EndAndExpand" />
+	<StackLayout x:Name="stackLayout" Orientation="Horizontal" Padding="0" Spacing="0" />
 
 </ScrollView>
