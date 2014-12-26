@@ -186,6 +186,7 @@
     <AndroidResource Include="Resources\drawable\wsymbol_0090_heavy_sleet_night.png" />
     <AndroidResource Include="Resources\drawable\wsymbol_0091_volcanic_ash.png" />
     <AndroidResource Include="Resources\drawable\wsymbol_0999_unknown.png" />
+    <AndroidResource Include="Resources\drawable\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

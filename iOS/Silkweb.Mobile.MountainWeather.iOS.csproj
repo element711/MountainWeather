@@ -9,7 +9,6 @@
     <RootNamespace>Silkweb.Mobile.MountainWeather.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
-    <AssemblyName>SilkwebMobileMountainWeatheriOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -206,6 +205,7 @@
     <BundleResource Include="Resources\wsymbol_0090_heavy_sleet_night.png" />
     <BundleResource Include="Resources\wsymbol_0091_volcanic_ash.png" />
     <BundleResource Include="Resources\wsymbol_0999_unknown.png" />
+    <BundleResource Include="Resources\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

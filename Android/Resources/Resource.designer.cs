@@ -48,280 +48,283 @@ namespace Silkweb.Mobile.MountainWeather.Android
 			public const int Icon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int wsymbol_0001_sunny = 2130837505;
+			public const int README = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int wsymbol_0002_sunny_intervals = 2130837506;
+			public const int wsymbol_0001_sunny = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int wsymbol_0003_white_cloud = 2130837507;
+			public const int wsymbol_0002_sunny_intervals = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int wsymbol_0004_black_low_cloud = 2130837508;
+			public const int wsymbol_0003_white_cloud = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int wsymbol_0005_hazy_sun = 2130837509;
+			public const int wsymbol_0004_black_low_cloud = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int wsymbol_0006_mist = 2130837510;
+			public const int wsymbol_0005_hazy_sun = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int wsymbol_0007_fog = 2130837511;
+			public const int wsymbol_0006_mist = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int wsymbol_0008_clear_sky_night = 2130837512;
+			public const int wsymbol_0007_fog = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int wsymbol_0009_light_rain_showers = 2130837513;
+			public const int wsymbol_0008_clear_sky_night = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int wsymbol_0010_heavy_rain_showers = 2130837514;
+			public const int wsymbol_0009_light_rain_showers = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int wsymbol_0011_light_snow_showers = 2130837515;
+			public const int wsymbol_0010_heavy_rain_showers = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int wsymbol_0012_heavy_snow_showers = 2130837516;
+			public const int wsymbol_0011_light_snow_showers = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int wsymbol_0013_sleet_showers = 2130837517;
+			public const int wsymbol_0012_heavy_snow_showers = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int wsymbol_0014_light_hail_showers = 2130837518;
+			public const int wsymbol_0013_sleet_showers = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int wsymbol_0015_heavy_hail_showers = 2130837519;
+			public const int wsymbol_0014_light_hail_showers = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int wsymbol_0016_thundery_showers = 2130837520;
+			public const int wsymbol_0015_heavy_hail_showers = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int wsymbol_0017_cloudy_with_light_rain = 2130837521;
+			public const int wsymbol_0016_thundery_showers = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int wsymbol_0018_cloudy_with_heavy_rain = 2130837522;
+			public const int wsymbol_0017_cloudy_with_light_rain = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int wsymbol_0019_cloudy_with_light_snow = 2130837523;
+			public const int wsymbol_0018_cloudy_with_heavy_rain = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int wsymbol_0020_cloudy_with_heavy_snow = 2130837524;
+			public const int wsymbol_0019_cloudy_with_light_snow = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int wsymbol_0021_cloudy_with_sleet = 2130837525;
+			public const int wsymbol_0020_cloudy_with_heavy_snow = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int wsymbol_0022_cloudy_with_light_hail = 2130837526;
+			public const int wsymbol_0021_cloudy_with_sleet = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int wsymbol_0023_cloudy_with_heavy_hail = 2130837527;
+			public const int wsymbol_0022_cloudy_with_light_hail = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int wsymbol_0024_thunderstorms = 2130837528;
+			public const int wsymbol_0023_cloudy_with_heavy_hail = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int wsymbol_0025_light_rain_showers_night = 2130837529;
+			public const int wsymbol_0024_thunderstorms = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int wsymbol_0026_heavy_rain_showers_night = 2130837530;
+			public const int wsymbol_0025_light_rain_showers_night = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int wsymbol_0027_light_snow_showers_night = 2130837531;
+			public const int wsymbol_0026_heavy_rain_showers_night = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int wsymbol_0028_heavy_snow_showers_night = 2130837532;
+			public const int wsymbol_0027_light_snow_showers_night = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int wsymbol_0029_sleet_showers_night = 2130837533;
+			public const int wsymbol_0028_heavy_snow_showers_night = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int wsymbol_0030_light_hail_showers_night = 2130837534;
+			public const int wsymbol_0029_sleet_showers_night = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int wsymbol_0031_heavy_hail_showers_night = 2130837535;
+			public const int wsymbol_0030_light_hail_showers_night = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int wsymbol_0032_thundery_showers_night = 2130837536;
+			public const int wsymbol_0031_heavy_hail_showers_night = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int wsymbol_0033_cloudy_with_light_rain_night = 2130837537;
+			public const int wsymbol_0032_thundery_showers_night = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int wsymbol_0034_cloudy_with_heavy_rain_night = 2130837538;
+			public const int wsymbol_0033_cloudy_with_light_rain_night = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int wsymbol_0035_cloudy_with_light_snow_night = 2130837539;
+			public const int wsymbol_0034_cloudy_with_heavy_rain_night = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int wsymbol_0036_cloudy_with_heavy_snow_night = 2130837540;
+			public const int wsymbol_0035_cloudy_with_light_snow_night = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int wsymbol_0037_cloudy_with_sleet_night = 2130837541;
+			public const int wsymbol_0036_cloudy_with_heavy_snow_night = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int wsymbol_0038_cloudy_with_light_hail_night = 2130837542;
+			public const int wsymbol_0037_cloudy_with_sleet_night = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int wsymbol_0039_cloudy_with_heavy_hail_night = 2130837543;
+			public const int wsymbol_0038_cloudy_with_light_hail_night = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int wsymbol_0040_thunderstorms_night = 2130837544;
+			public const int wsymbol_0039_cloudy_with_heavy_hail_night = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int wsymbol_0041_partly_cloudy_night = 2130837545;
+			public const int wsymbol_0040_thunderstorms_night = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int wsymbol_0042_cloudy_night = 2130837546;
+			public const int wsymbol_0041_partly_cloudy_night = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int wsymbol_0043_mostly_cloudy = 2130837547;
+			public const int wsymbol_0042_cloudy_night = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int wsymbol_0044_mostly_cloudy_night = 2130837548;
+			public const int wsymbol_0043_mostly_cloudy = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int wsymbol_0045_hot = 2130837549;
+			public const int wsymbol_0044_mostly_cloudy_night = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int wsymbol_0046_cold = 2130837550;
+			public const int wsymbol_0045_hot = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int wsymbol_0047_freezing_fog = 2130837551;
+			public const int wsymbol_0046_cold = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int wsymbol_0048_drizzle = 2130837552;
+			public const int wsymbol_0047_freezing_fog = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int wsymbol_0049_freezing_drizzle = 2130837553;
+			public const int wsymbol_0048_drizzle = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int wsymbol_0050_freezing_rain = 2130837554;
+			public const int wsymbol_0049_freezing_drizzle = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int wsymbol_0051_extreme_rain = 2130837555;
+			public const int wsymbol_0050_freezing_rain = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int wsymbol_0052_extreme_snow = 2130837556;
+			public const int wsymbol_0051_extreme_rain = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int wsymbol_0053_blowing_snow = 2130837557;
+			public const int wsymbol_0052_extreme_snow = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int wsymbol_0054_blizzard = 2130837558;
+			public const int wsymbol_0053_blowing_snow = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int wsymbol_0055_smoke = 2130837559;
+			public const int wsymbol_0054_blizzard = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int wsymbol_0056_dust_sand = 2130837560;
+			public const int wsymbol_0055_smoke = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int wsymbol_0057_thundery_snow_showers = 2130837561;
+			public const int wsymbol_0056_dust_sand = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int wsymbol_0058_thunderstorms_with_snow = 2130837562;
+			public const int wsymbol_0057_thundery_snow_showers = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int wsymbol_0059_thunderstorms_with_hail = 2130837563;
+			public const int wsymbol_0058_thunderstorms_with_snow = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int wsymbol_0060_windy = 2130837564;
+			public const int wsymbol_0059_thunderstorms_with_hail = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int wsymbol_0061_hot_night = 2130837565;
+			public const int wsymbol_0060_windy = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int wsymbol_0062_cold_night = 2130837566;
+			public const int wsymbol_0061_hot_night = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int wsymbol_0063_mist_night = 2130837567;
+			public const int wsymbol_0062_cold_night = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int wsymbol_0064_fog_night = 2130837568;
+			public const int wsymbol_0063_mist_night = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int wsymbol_0065_freezing_fog_night = 2130837569;
+			public const int wsymbol_0064_fog_night = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int wsymbol_0066_drizzle_night = 2130837570;
+			public const int wsymbol_0065_freezing_fog_night = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int wsymbol_0067_freezing_drizzle_night = 2130837571;
+			public const int wsymbol_0066_drizzle_night = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int wsymbol_0068_freezing_rain_night = 2130837572;
+			public const int wsymbol_0067_freezing_drizzle_night = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int wsymbol_0069_extreme_rain_night = 2130837573;
+			public const int wsymbol_0068_freezing_rain_night = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int wsymbol_0070_extreme_snow_night = 2130837574;
+			public const int wsymbol_0069_extreme_rain_night = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int wsymbol_0071_blowing_snow_night = 2130837575;
+			public const int wsymbol_0070_extreme_snow_night = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int wsymbol_0072_blizzard_night = 2130837576;
+			public const int wsymbol_0071_blowing_snow_night = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int wsymbol_0073_smoke_night = 2130837577;
+			public const int wsymbol_0072_blizzard_night = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int wsymbol_0074_dust_sand_night = 2130837578;
+			public const int wsymbol_0073_smoke_night = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int wsymbol_0075_thundery_snow_showers_night = 2130837579;
+			public const int wsymbol_0074_dust_sand_night = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int wsymbol_0076_thunderstorms_with_snow_night = 2130837580;
+			public const int wsymbol_0075_thundery_snow_showers_night = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int wsymbol_0077_thunderstorms_with_hail_night = 2130837581;
+			public const int wsymbol_0076_thunderstorms_with_snow_night = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int wsymbol_0078_windy_night = 2130837582;
+			public const int wsymbol_0077_thunderstorms_with_hail_night = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int wsymbol_0079_tornado = 2130837583;
+			public const int wsymbol_0078_windy_night = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int wsymbol_0080_tropical_storm_hurricane = 2130837584;
+			public const int wsymbol_0079_tornado = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int wsymbol_0081_heavy_drizzle = 2130837585;
+			public const int wsymbol_0080_tropical_storm_hurricane = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int wsymbol_0082_heavy_drizzle_night = 2130837586;
+			public const int wsymbol_0081_heavy_drizzle = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int wsymbol_0083_heavy_freezing_drizzle = 2130837587;
+			public const int wsymbol_0082_heavy_drizzle_night = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int wsymbol_0084_heavy_freezing_drizzle_night = 2130837588;
+			public const int wsymbol_0083_heavy_freezing_drizzle = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int wsymbol_0085_extreme_rain_showers = 2130837589;
+			public const int wsymbol_0084_heavy_freezing_drizzle_night = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int wsymbol_0086_extreme_rain_showers_night = 2130837590;
+			public const int wsymbol_0085_extreme_rain_showers = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int wsymbol_0087_heavy_sleet_showers = 2130837591;
+			public const int wsymbol_0086_extreme_rain_showers_night = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int wsymbol_0088_heavy_sleet_showers_night = 2130837592;
+			public const int wsymbol_0087_heavy_sleet_showers = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int wsymbol_0089_heavy_sleet = 2130837593;
+			public const int wsymbol_0088_heavy_sleet_showers_night = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int wsymbol_0090_heavy_sleet_night = 2130837594;
+			public const int wsymbol_0089_heavy_sleet = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int wsymbol_0091_volcanic_ash = 2130837595;
+			public const int wsymbol_0090_heavy_sleet_night = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int wsymbol_0999_unknown = 2130837596;
+			public const int wsymbol_0091_volcanic_ash = 2130837596;
+			
+			// aapt resource value: 0x7f02005d
+			public const int wsymbol_0999_unknown = 2130837597;
 			
 			static Drawable()
 			{
