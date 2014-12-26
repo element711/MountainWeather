@@ -5,6 +5,8 @@ using Xamarin.Forms;
 
 namespace Silkweb.Mobile.Core.Tests.Extensions
 {
+    public class App : Application {}
+
     [TestFixture]
     public class ApplicationResourceExtensionFixture
     {

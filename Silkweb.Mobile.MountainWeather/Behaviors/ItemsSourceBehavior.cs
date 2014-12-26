@@ -1,5 +1,4 @@
 ﻿using System;
-using Xamarin.Behaviors;
 using Xamarin.Forms;
 using System.Collections;
 
@@ -7,6 +6,8 @@ namespace Silkweb.Mobile.MountainWeather.Behaviors
 {
     public class ItemsSourceBehavior : Behavior<StackLayout>
     {
+        private StackLayout _associatedObject;
+
         public static readonly BindableProperty ItemsSourceProperty = 
             BindableProperty.Create<ItemsSourceBehavior,IList>(p => p.ItemsSource, default(IList), BindingMode.TwoWay, null, ItemsSourceChanged);
 
@@ -33,13 +34,13 @@ namespace Silkweb.Mobile.MountainWeather.Behaviors
 
         private void SetItems()
         {
-            AssociatedObject.Children.Clear();
+            _associatedObject.Children.Clear();
 
             if (ItemsSource == null)
                 return;
 
             foreach (var item in ItemsSource)
-                AssociatedObject.Children.Add(GetItemView(item));
+                _associatedObject.Children.Add(GetItemView(item));
         }
 
         private View GetItemView(object item)
@@ -50,11 +51,10 @@ namespace Silkweb.Mobile.MountainWeather.Behaviors
             return view;
         }
 
-        protected override void OnAttach()
-        {}
-
-        protected override void OnDetach()
-        {}
+        protected override void OnAttachedTo(StackLayout bindable)
+        {
+            _associatedObject = bindable;
+        }
     }
 }
 

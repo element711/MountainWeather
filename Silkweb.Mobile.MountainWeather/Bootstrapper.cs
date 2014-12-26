@@ -1,19 +1,17 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using Silkweb.Mobile.MountainWeather.Views;
 using Xamarin.Forms;
 using Silkweb.Mobile.Core.Factories;
 using Silkweb.Mobile.MountainWeather.ViewModels;
-using Silkweb.Mobile.Core;
 using Silkweb.Mobile.Core.Bootstrapping;
 
 namespace Silkweb.Mobile.MountainWeather
 {
     public class Bootstrapper : AutofacBootstrapper
     {
-        private readonly App _application;
+        private readonly Application _application;
 
-        public Bootstrapper(App application)
+        public Bootstrapper(Application application)
         {
             _application = application;           
         }
@@ -37,8 +35,8 @@ namespace Silkweb.Mobile.MountainWeather
             var mainPage = viewFactory.Resolve<MountainAreasViewModel>();
             var navigationPage = new NavigationPage(mainPage);
 
-            Color backgroundColor = (Color)App.Current.Resources["backgroundColor"]; 
-            Color textColor = (Color)App.Current.Resources["textColor"];
+            Color backgroundColor = (Color)_application.Resources["backgroundColor"]; 
+            Color textColor = (Color)_application.Resources["textColor"];
 
             navigationPage.BarBackgroundColor = backgroundColor;
             navigationPage.BarTextColor = textColor;

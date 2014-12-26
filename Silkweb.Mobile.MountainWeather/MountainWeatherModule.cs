@@ -37,7 +37,7 @@ namespace Silkweb.Mobile.MountainWeather
 
             // current page resolver
             builder.RegisterInstance<Func<Page>>(() => 
-                ((NavigationPage)App.Current.MainPage).CurrentPage);
+                ((NavigationPage)Application.Current.MainPage).CurrentPage);
         }
     }
 }

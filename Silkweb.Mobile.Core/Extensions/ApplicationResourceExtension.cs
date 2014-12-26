@@ -19,7 +19,7 @@ namespace Silkweb.Mobile.Core.Extensions
 
             object value;
 
-            bool found = App.Current.Resources.TryGetValue(this.Key, out value);
+            bool found = Application.Current.Resources.TryGetValue(this.Key, out value);
 
             if (found) return value;
 

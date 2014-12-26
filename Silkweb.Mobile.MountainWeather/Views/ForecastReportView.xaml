@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Silkweb.Mobile.MountainWeather.Views.ForecastReportView" xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors" xmlns:cv="clr-namespace:Silkweb.Mobile.Core.Views;assembly=Silkweb.Mobile.Core" xmlns:ex="clr-namespace:Silkweb.Mobile.Core.Extensions;assembly=Silkweb.Mobile.Core" xmlns:cc="clr-namespace:Silkweb.Mobile.Core.Converters;assembly=Silkweb.Mobile.Core" xmlns:v="clr-namespace:Silkweb.Mobile.MountainWeather.Views;assembly=Silkweb.Mobile.MountainWeather" xmlns:vm="clr-namespace:Silkweb.Mobile.MountainWeather.ViewModels;assembly=Silkweb.Mobile.MountainWeather" xmlns:c="clr-namespace:Silkweb.Mobile.MountainWeather.Converters;assembly=Silkweb.Mobile.MountainWeather" Title="{Binding Title}" BackgroundColor="{ex:ApplicationResource backgroundColor}">
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Silkweb.Mobile.MountainWeather.Views.ForecastReportView" 
+	xmlns:cv="clr-namespace:Silkweb.Mobile.Core.Views;assembly=Silkweb.Mobile.Core" 
+	xmlns:ex="clr-namespace:Silkweb.Mobile.Core.Extensions;assembly=Silkweb.Mobile.Core" 
+	xmlns:cc="clr-namespace:Silkweb.Mobile.Core.Converters;assembly=Silkweb.Mobile.Core" 
+	xmlns:v="clr-namespace:Silkweb.Mobile.MountainWeather.Views;assembly=Silkweb.Mobile.MountainWeather" 
+	xmlns:vm="clr-namespace:Silkweb.Mobile.MountainWeather.ViewModels;assembly=Silkweb.Mobile.MountainWeather" 
+	xmlns:c="clr-namespace:Silkweb.Mobile.MountainWeather.Converters;assembly=Silkweb.Mobile.MountainWeather" 
+	Title="{Binding Title}" BackgroundColor="{ex:ApplicationResource backgroundColor}">
 	<ContentPage.Resources>
 		<ResourceDictionary>
 			<c:SelectedColorConverter x:Key="selectedColorConverter" SelectedColor="Transparent" UnSelectedColor="{ex:ApplicationResource highlightColor}" />

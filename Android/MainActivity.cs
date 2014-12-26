@@ -8,7 +8,7 @@ using Xamarin.Forms.Platform.Android;
 namespace Silkweb.Mobile.MountainWeather.Android
 {
     [Activity(Label = "Silkweb.Mobile.MountainWeather.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : AndroidActivity
+    public class MainActivity : FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -16,7 +16,7 @@ namespace Silkweb.Mobile.MountainWeather.Android
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-            SetPage(MountainWeatherApp.Current.MainPage);
+            LoadApplication( new MountainWeatherApp());
         }
     }
 }

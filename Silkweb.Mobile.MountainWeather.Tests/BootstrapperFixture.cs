@@ -5,6 +5,8 @@ using Xamarin.Forms;
 
 namespace Silkweb.Mobile.MountainWeather.Tests
 {
+    public class App : Application {}
+
     [TestFixture]
     public class BootstrapperFixture
     {

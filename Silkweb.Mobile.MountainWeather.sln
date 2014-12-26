@@ -221,6 +221,7 @@ Global
 		{F47D2D21-C606-4E80-BAD8-78166841FF41} = {1BBD0C84-3F76-447C-B0DD-0DF8A979AEA5}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = iOS\Silkweb.Mobile.MountainWeather.iOS.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedFlat

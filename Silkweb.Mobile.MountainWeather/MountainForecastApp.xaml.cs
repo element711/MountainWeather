@@ -1,8 +1,9 @@
 ﻿using Silkweb.Mobile.Core;
+using Xamarin.Forms;
 
 namespace Silkweb.Mobile.MountainWeather
 {	
-	public partial class MountainWeatherApp : App
+	public partial class MountainWeatherApp : Application
 	{	
 		public MountainWeatherApp()
 		{
@@ -11,11 +12,6 @@ namespace Silkweb.Mobile.MountainWeather
             var bootstrapper = new Bootstrapper(this);
             bootstrapper.Run();
 		}
-
-        public new static App Current
-        {
-            get { return App.Current ?? new MountainWeatherApp();  }
-        }
 	}
 }
 

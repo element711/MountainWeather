@@ -1,25 +1,25 @@
-﻿using Xamarin.Forms;
+using Xamarin.Forms;
 using Silkweb.Mobile.MountainWeather.iOS;
 using Silkweb.Mobile.Core.Views;
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer (typeof (TextCellExtended), typeof (TextCellExtendedRenderer))]
 
 namespace Silkweb.Mobile.MountainWeather.iOS
 {
-    public class TextCellExtendedRenderer : Xamarin.Forms.Platform.iOS.TextCellRenderer
+    public class TextCellExtendedRenderer : TextCellRenderer
     {      
         private UIView _bgView;
 
-        public override MonoTouch.UIKit.UITableViewCell GetCell (Cell item, MonoTouch.UIKit.UITableView tv)
-        {                  
-            var cell = base.GetCell (item, tv);
+        public override UITableViewCell GetCell(Cell item, UITableViewCell reusableCell, UITableView tv)
+        {               
+            var cell = base.GetCell(item, reusableCell, tv);
 
             var textCellExtended = item as TextCellExtended;
 
             if (textCellExtended.ShowDisclosure)
-                cell.Accessory = MonoTouch.UIKit.UITableViewCellAccessory.DisclosureIndicator;
+                cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
 
             if (textCellExtended.SelectedBackgroundColor != default(Color))
             {

@@ -1,9 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using Silkweb.Mobile.Core.Services;
-using Xamarin.Forms;
 using Moq;
-using System.Threading.Tasks;
 using Silkweb.Mobile.Core.Interfaces;
 
 namespace Silkweb.Mobile.Core.Tests.Services

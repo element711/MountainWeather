@@ -1,11 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Reflection;
-using Xamarin.Forms;
-using Silkweb.Mobile.Core.Exceptions;
 
 namespace Silkweb.Mobile.Core.Views
 {

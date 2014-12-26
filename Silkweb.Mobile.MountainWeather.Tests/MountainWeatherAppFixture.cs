@@ -13,7 +13,7 @@ namespace Silkweb.Mobile.MountainWeather.Tests
         {
             var app = new MountainWeatherApp();
 
-            Assert.That(App.Current, Is.EqualTo(app));
+            Assert.That(Application.Current, Is.EqualTo(app));
 
             Assert.That(app.MainPage, Is.Not.Null);
             Assert.That(app.MainPage, Is.TypeOf<NavigationPage>());

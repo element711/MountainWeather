@@ -1,18 +1,19 @@
 ﻿using Microsoft.Phone.Controls;
 using Xamarin.Forms;
-using Silkweb.Mobile.MountainWeather;
+using Xamarin.Forms.Platform.WinPhone;
 
 namespace Silkweb.Mobile.MountainWeather.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : FormsApplicationPage
     {
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
-            Content = MountainWeatherApp.Current.MainPage.ConvertPageToUIElement(this);
+            LoadApplication(new MountainWeatherApp());
         }
     }
 }

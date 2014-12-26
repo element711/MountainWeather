@@ -29,11 +29,11 @@ namespace Silkweb.Mobile.Core.Bootstrapping
             builder.RegisterInstance<Func<Page>>(() =>
                 {
                     // Check if we are using MasterDetailPage
-                    var masterDetailPage = App.Current.MainPage as MasterDetailPage;
+                    var masterDetailPage = Application.Current.MainPage as MasterDetailPage;
 
                     var page = masterDetailPage != null 
                         ? masterDetailPage.Detail 
-                        : App.Current.MainPage;
+                        : Application.Current.MainPage;
 
                     // Check if page is a NavigationPage
                     var navigationPage = page as IPageContainer<Page>;
