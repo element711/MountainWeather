@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.Forecast">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAQAAAAAEAAgAggAACAAQARAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Forecast.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WeatherPPN" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.ForecastCapability" Collapsed="true">
+    <Position X="13.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAEAAAAAAAAAAAAAAAAAACAACiAAAQAAAAA=</HashCode>
+      <FileName>Models\ForecastCapability.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.ForecastReport">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AiAAAAACBAAAgECAECIAAAAAAAQAACABACAgAAAACAA=</HashCode>
+      <FileName>Models\ForecastReport.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ForecastDay1" />
+      <Property Name="ForecastDay0" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Hazards" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.GaugeText" Collapsed="true">
+    <Position X="13.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\GaugeText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.Hazard">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAgAAAAAACAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Hazard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.Location">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.RainGauge" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAgAAAAAIAhAAAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>Models\RainGauge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.WeatherCode">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAgAAAAAAAgAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\WeatherCodes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.WeatherCodes">
+    <Position X="13.5" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAACAAA=</HashCode>
+      <FileName>Models\WeatherCodes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.WeatherPPN" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WeatherPPN.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WxPeriods" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.Models.WxPeriod">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAACAAAAAQAQAAAAAAAAI=</HashCode>
+      <FileName>Models\WxPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Silkweb.Mobile.MountainWeather.Models.Risk" Collapsed="true">
+    <Position X="13.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAEEAAA=</HashCode>
+      <FileName>Models\Risk.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

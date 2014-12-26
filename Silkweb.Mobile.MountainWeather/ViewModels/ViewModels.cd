@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.ForecastReportViewModel">
+    <Position X="12" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAACAAAAAQAAAAAACADIAAAACEAYAAAAAA=</HashCode>
+      <FileName>ViewModels\ForecastReportViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.ForecastViewModel">
+    <Position X="9.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAQAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ViewModels\ForecastViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WeatherPeriods" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.MountainAreasViewModel">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAACiAAAAAAAEAAAAAAAE=</HashCode>
+      <FileName>ViewModels\MountainAreasViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Areas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.MountainAreaViewModel">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAABAAAIAAAAAAAAAQAAAAAAiAACCAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MountainAreaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.OutlookViewModel">
+    <Position X="7.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\OutlookViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.WeatherDayViewModel">
+    <Position X="8.5" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAABAAAAAAAAAAAAAARAAAAAACACEA=</HashCode>
+      <FileName>ViewModels\WeatherDayViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.MountainWeather.ViewModels.WeatherPeriodViewModel">
+    <Position X="13" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAIAAAIAAAAAQAAAAAAEAAAI=</HashCode>
+      <FileName>ViewModels\WeatherPeriodViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silkweb.Mobile.Core.ViewModels.SelectableViewModel">
+    <Position X="8.5" Y="0.5" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Silkweb.Mobile.Core.Interfaces.ISelectable">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

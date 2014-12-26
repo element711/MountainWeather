@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentView 
+  xmlns="http://xamarin.com/schemas/2014/forms" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+  xmlns:cv="clr-namespace:Silkweb.Mobile.Core.Views;assembly=Silkweb.Mobile.Core"    
+  xmlns:ex="clr-namespace:Silkweb.Mobile.Core.Extensions;assembly=Silkweb.Mobile.Core" 
+  xmlns:cc="clr-namespace:Silkweb.Mobile.Core.Converters;assembly=Silkweb.Mobile.Core" 
+  x:Class="Silkweb.Mobile.MountainWeather.Views.ForecastView" 
+  IsClippedToBounds="true">
+
+  <!--Andriod fix: IsClippedToBounds https://bugzilla.xamarin.com/show_bug.cgi?id=21384-->
+
+	<ContentView.Resources>
+		<ResourceDictionary>
+			<cc:NullToVisibilityConverter x:Key="nullToVisibilityConverter" />
+			<DataTemplate x:Key="itemItemplate">
+				<Grid WidthRequest="100">
+					<StackLayout Padding="5" Spacing="0">
+						<Label Text="{Binding Period}" Font="Micro" VerticalOptions="Start" HorizontalOptions="Center" TextColor="{ex:ApplicationResource textColor}" />
+						<Image Source="{Binding Icon}" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="48" HeightRequest="48" />
+						<Label Text="{Binding Weather}" Font="Micro" VerticalOptions="Start" HorizontalOptions="Center" TextColor="{ex:ApplicationResource textColor}" />
+						<StackLayout Padding="0,5,0,0" Spacing="0">
+							<Label Text="{Binding Probability}" Font="Micro" VerticalOptions="Start" HorizontalOptions="Center" TextColor="{ex:ApplicationResource textColor}" />
+						</StackLayout>
+					</StackLayout>
+				</Grid>
+			</DataTemplate>
+		</ResourceDictionary>
+	</ContentView.Resources>
+	<StackLayout Spacing="0" Padding="5">
+		<StackLayout Spacing="0">
+			<Label Text="{Binding Title}" Font="Bold, Large" TextColor="{ex:ApplicationResource accentColor}" />
+			<Label Text="{Binding IssuedBy}" Font="Micro" TextColor="{ex:ApplicationResource textColor}" />
+		</StackLayout>
+		<ScrollView Orientation="Vertical" IsClippedToBounds="true">
+			<StackLayout Spacing="0">
+
+				<cv:ItemsView IsClippedToBounds="true" ItemsSource="{Binding WeatherPeriods}" ItemTemplate="{StaticResource itemItemplate}"
+					IsVisible="{Binding WeatherPeriods, Converter={StaticResource nullToVisibilityConverter}}" />
+				
+				<StackLayout VerticalOptions="FillAndExpand" Spacing="10">
+					<StackLayout Spacing="0">
+						<Label Text="Summary" Font="Bold, Medium" TextColor="{ex:ApplicationResource accentColor}" />
+						<Label Text="{Binding Weather}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+					</StackLayout>
+					<StackLayout Spacing="0">
+						<Label Text="Visibility" Font="Bold, Medium" TextColor="{ex:ApplicationResource accentColor}" />
+						<Label Text="{Binding Forecast.Visibility}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+					</StackLayout>
+					<StackLayout Spacing="0">
+						<Label Text="Hill Fog" Font="Bold, Medium" TextColor="{ex:ApplicationResource accentColor}" />
+						<Label Text="{Binding Forecast.HillFog}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+					</StackLayout>
+					<StackLayout Spacing="0">
+						<Label Text="{Binding Forecast.MaxWindLevel, StringFormat='Max wind above {0}'}" Font="Bold, Medium" TextColor="{ex:ApplicationResource accentColor}" />
+						<Label Text="{Binding Forecast.MaxWind}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+					</StackLayout>
+					<StackLayout Spacing="5">
+						<Label Text="Temperature" Font="Bold, Medium" TextColor="{ex:ApplicationResource accentColor}" />
+						<StackLayout Spacing="0">
+							<Label Text="Freezing level:" Font="Bold, Small" TextColor="{ex:ApplicationResource accentColor}" />
+							<Label Text="{Binding Forecast.FreezingLevel}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+						</StackLayout>
+						<StackLayout Spacing="0">
+							<Label Text="Above 900m:" Font="Bold, Small" TextColor="{ex:ApplicationResource accentColor}" />
+							<Label Text="{Binding Forecast.TempHighLevel}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+						</StackLayout>
+						<StackLayout Spacing="0">
+							<Label Text="Low level:" Font="Bold, Small" TextColor="{ex:ApplicationResource accentColor}" />
+							<Label Text="{Binding Forecast.TempLowLevel}" Font="Small" TextColor="{ex:ApplicationResource textColor}" />
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</StackLayout>
+</ContentView>
