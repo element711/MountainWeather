@@ -144,4 +144,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\TV03\" />
+  </ItemGroup>
 </Project>
