@@ -33,14 +33,12 @@
 				</cv:TemplateSelector.Templates>
 			</cv:TemplateSelector>
 			<DataTemplate x:Key="itemTemplate">
-				<Grid Padding="1">
-					<Grid WidthRequest="100" HeightRequest="100" BackgroundColor="{Binding IsSelected, Converter={StaticResource selectedColorConverter}}">
-						<StackLayout Padding="5" Spacing="0">
-							<Label Text="{Binding Date, StringFormat='{0:ddd}'}" Font="Mirco" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{ex:ApplicationResource textColor}" />
-							<Label Text="{Binding Date, Converter={StaticResource dateTimeConverter}, ConverterParameter='d{0} MMM'}" Font="Mirco" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{ex:ApplicationResource textColor}" />
-							<Image Source="{Binding Icon}" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="48" HeightRequest="48" />
-						</StackLayout>
-					</Grid>
+				<Grid WidthRequest="100" HeightRequest="100" BackgroundColor="{Binding IsSelected, Converter={StaticResource selectedColorConverter}}">
+					<StackLayout Padding="5" Spacing="0">
+						<Label Text="{Binding Date, StringFormat='{0:ddd}'}" Font="Mirco" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{ex:ApplicationResource textColor}" />
+						<Label Text="{Binding Date, Converter={StaticResource dateTimeConverter}, ConverterParameter='d{0} MMM'}" Font="Mirco" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{ex:ApplicationResource textColor}" />
+						<Image Source="{Binding Icon}" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="48" HeightRequest="48" />
+					</StackLayout>
 				</Grid>
 			</DataTemplate>
 		</ResourceDictionary>

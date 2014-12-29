@@ -75,7 +75,8 @@ namespace Silkweb.Mobile.Core.Views
             view.GestureRecognizers.Add(new TapGestureRecognizer
                 { 
                     Command = _selectedCommand, 
-                    CommandParameter = item as object
+                    CommandParameter = item as object,
+                    NumberOfTapsRequired = 1
                 });
 
             return view;
